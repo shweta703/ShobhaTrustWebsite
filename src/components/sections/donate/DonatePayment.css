@@ -1,0 +1,174 @@
+.donate-payment .section-header {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.donate-payment__grid {
+  display: grid;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+@media (min-width: 900px) {
+  .donate-payment__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2.5rem;
+  }
+}
+
+.donate-payment__card {
+  height: 100%;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+}
+
+.donate-payment__card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary-dark);
+}
+
+.donate-payment__card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.donate-payment__fields {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.donate-payment__field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.donate-payment__field dt {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.donate-payment__field dd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.donate-payment__field dd span {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--color-text);
+  word-break: break-all;
+}
+
+.donate-payment__copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--color-primary-dark);
+  flex-shrink: 0;
+  transition: background var(--transition), color var(--transition);
+}
+
+.donate-payment__copy:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.donate-payment__card--upi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.donate-payment__card--upi h3 {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary-dark);
+}
+
+.donate-payment__upi-label {
+  width: 100%;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.donate-payment__upi-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  margin-bottom: 1.5rem;
+}
+
+.donate-payment__upi-row code {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.donate-payment__qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(166, 120, 181, 0.4);
+}
+
+.donate-payment__qr img {
+  width: min(220px, 100%);
+  height: auto;
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  padding: 0.5rem;
+  object-fit: contain;
+}
+
+.donate-payment__qr span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.donate-payment__submit {
+  width: 100%;
+}

@@ -1,0 +1,45 @@
+.home-why__inner {
+  max-width: 800px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.home-why__label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 0.65rem;
+}
+
+.home-why__inner h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  margin-bottom: 1.25rem;
+}
+
+.home-why__text {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.home-why__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.home-why__pill {
+  padding: 0.75rem 1.5rem;
+  background: var(--color-white);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}

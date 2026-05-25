@@ -1,0 +1,115 @@
+.programs-impact {
+  position: relative;
+  overflow: hidden;
+}
+
+.programs-impact__ambient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(166, 120, 181, 0.1) 0%, transparent 55%),
+    var(--color-bg-alt);
+  pointer-events: none;
+}
+
+.programs-impact__wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.programs-impact .section-header {
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
+}
+
+.programs-impact__grid {
+  display: grid;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 600px) {
+  .programs-impact__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .programs-impact__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.programs-impact__card {
+  height: 100%;
+  padding: 1.5rem 1.35rem;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: box-shadow var(--transition);
+}
+
+.programs-impact__card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  bottom: 1rem;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: linear-gradient(180deg, var(--color-primary), var(--color-primary-dark));
+}
+
+.programs-impact__card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.programs-impact__value {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0 0 0.35rem;
+  background: linear-gradient(
+    128deg,
+    var(--color-secondary) 0%,
+    var(--color-primary-dark) 55%,
+    var(--color-primary) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.programs-impact__stat-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.programs-impact__card:not(:has(.programs-impact__value)) .programs-impact__stat-title {
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(
+    128deg,
+    var(--color-secondary) 0%,
+    var(--color-primary-dark) 55%,
+    var(--color-primary) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.programs-impact__desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}

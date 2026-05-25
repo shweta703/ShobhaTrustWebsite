@@ -1,0 +1,97 @@
+.page-hero {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  padding-top: calc(var(--nav-height) + 2rem);
+  padding-bottom: clamp(3rem, 6vw, 4.5rem);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, var(--color-primary-light) 100%);
+}
+
+.page-hero--has-image {
+  background-image: var(--page-hero-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: clamp(360px, 52vh, 480px);
+}
+
+.page-hero--has-image .page-hero__overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(13, 33, 55, 0.72) 0%,
+    rgba(26, 58, 92, 0.58) 45%,
+    rgba(125, 82, 148, 0.52) 100%
+  );
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 33, 55, 0.92) 0%,
+    rgba(26, 58, 92, 0.85) 50%,
+    rgba(125, 82, 148, 0.75) 100%
+  );
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  color: var(--color-white);
+}
+
+.page-hero__breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.page-hero__breadcrumb a {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color var(--transition);
+}
+
+.page-hero__breadcrumb a:hover {
+  color: var(--color-secondary-light);
+}
+
+.page-hero__breadcrumb span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.page-hero__label {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-secondary-light);
+  margin-bottom: 0.75rem;
+}
+
+.page-hero__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.page-hero__desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+}

@@ -1,0 +1,158 @@
+.contact-faq__wrap {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.contact-faq .section-header {
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
+}
+
+.contact-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contact-faq__item {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.contact-faq__item--open {
+  border-color: rgba(166, 120, 181, 0.45);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-faq__trigger {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+.contact-faq__trigger:hover {
+  background: rgba(166, 120, 181, 0.06);
+}
+
+.contact-faq__number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.contact-faq__question {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  padding-top: 0.2rem;
+}
+
+.contact-faq__chevron {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-dark);
+  transition: transform var(--transition);
+  margin-top: 0.15rem;
+}
+
+.contact-faq__item--open .contact-faq__chevron {
+  transform: rotate(180deg);
+}
+
+.contact-faq__panel {
+  overflow: hidden;
+}
+
+.contact-faq__panel-inner {
+  padding: 0 1.25rem 1.25rem 4.25rem;
+}
+
+@media (max-width: 599px) {
+  .contact-faq__panel-inner {
+    padding-left: 1.25rem;
+  }
+}
+
+.contact-faq__panel-inner p {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.contact-faq__lead {
+  font-weight: 600;
+  color: var(--color-text) !important;
+  margin-bottom: 0.65rem !important;
+}
+
+.contact-faq__bullets {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-faq__bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.contact-faq__bullets svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  margin-top: 0.15rem;
+}
+
+.contact-faq__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.contact-faq__links a {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  transition: color var(--transition);
+}
+
+.contact-faq__links a:hover {
+  color: var(--color-secondary);
+}

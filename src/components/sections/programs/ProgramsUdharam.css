@@ -1,0 +1,87 @@
+.programs-udharam__grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .programs-udharam__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3.5rem;
+  }
+}
+
+.programs-udharam__content .section-header {
+  margin-bottom: 1.25rem;
+}
+
+.programs-udharam__desc {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.programs-udharam__list-label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+  color: var(--color-text);
+}
+
+.programs-udharam__list {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.programs-udharam__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.programs-udharam__list svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  margin-top: 0.15rem;
+}
+
+.programs-udharam__closing {
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.programs-udharam__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.programs-udharam__image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.programs-udharam__image-wrap img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .programs-udharam__content .section-header.section-header--left .section-header__title {
+    margin-inline: 0;
+  }
+}

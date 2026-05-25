@@ -1,0 +1,87 @@
+.home-udharam__grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .home-udharam__grid {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 4rem;
+  }
+}
+
+.home-udharam__image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.home-udharam__image-wrap img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+}
+
+.home-udharam__tag {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  padding: 0.4rem 0.9rem;
+  background: var(--color-secondary);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+}
+
+.home-udharam__label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.home-udharam__content h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.home-udharam__desc {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.home-udharam__subtitle {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.home-udharam__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.75rem;
+}
+
+.home-udharam__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.home-udharam__list svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}

@@ -1,0 +1,99 @@
+.donate-cta {
+  position: relative;
+  padding: var(--section-padding) 0;
+  overflow: hidden;
+}
+
+.donate-cta__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, var(--color-secondary) 0%, var(--color-primary-dark) 100%);
+}
+
+.donate-cta__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 80% 20%, rgba(166, 120, 181, 0.25) 0%, transparent 50%);
+}
+
+.donate-cta .container {
+  position: relative;
+  z-index: 1;
+}
+
+.donate-cta__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  color: var(--color-white);
+}
+
+.donate-cta__label {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+  margin-bottom: 0.75rem;
+}
+
+.donate-cta__header h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.donate-cta__header p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+}
+
+.donate-cta__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .donate-cta__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.donate-cta__card {
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--color-white);
+}
+
+.donate-cta__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(166, 120, 181, 0.3);
+  color: var(--color-primary-light);
+  margin-bottom: 1.25rem;
+}
+
+.donate-cta__card h3 {
+  font-size: 1.35rem;
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+}
+
+.donate-cta__card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
